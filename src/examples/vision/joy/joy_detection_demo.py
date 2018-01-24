@@ -161,7 +161,7 @@ def main():
     args = parser.parse_args()
 
     device = get_aiy_device_name()
-    if not device or not 'Vision' in device:
+    if not device or 'Vision' not in device:
         print('Do you have an AIY Vision bonnet installed? Exiting.')
         sys.exit(0)
 

@@ -270,8 +270,8 @@ class SysFsPwmPin(SysFsPin):
     def _update_state(self, new_state):
         # Each time we enable, we need to first re-set the period and duty cycle (in
         # that order).
-        if new_state.period_ns != self._state.period_ns or (not self._state.enabled
-                                                            and new_state.enabled):
+        if new_state.period_ns != self._state.period_ns or (
+                not self._state.enabled and new_state.enabled):
             self._set_period_ns(new_state.period_ns)
         if new_state.duty_cycle != self._state.duty_cycle or (
                 not self._state.enabled and new_state.enabled):

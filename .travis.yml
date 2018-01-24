@@ -11,7 +11,7 @@ install:
 - pip3 install -r requirements.txt
 
 script:
-- pycodestyle --max-line-length=100 --exclude=*_pb2.py .
+- pycodestyle --config=./.pycodestyle .
 - nosetests --with-coverage
 
 after_success:
